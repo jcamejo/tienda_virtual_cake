@@ -86,6 +86,7 @@ p {
 	background: #003d4c url('../img/cake.icon.png') no-repeat left;
 	color: #fff;
 	padding: 0px 30px;
+	float: right;
 }
 #header h1 a {
 	color: #fff;

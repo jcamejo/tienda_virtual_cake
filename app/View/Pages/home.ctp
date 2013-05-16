@@ -21,7 +21,6 @@ if (!Configure::read('debug')):
 endif;
 App::uses('Debugger', 'Utility');
 ?>
-
 <div class="actions">
 	<h3><?php echo __('Módulos'); ?></h3>
 	<ul>
