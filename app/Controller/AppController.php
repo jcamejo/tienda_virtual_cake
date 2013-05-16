@@ -43,9 +43,19 @@ class AppController extends Controller {
                                 'Auth' => array(
                                     'loginRedirect' => array('controller' => 'pages', 'action' => 'home'),
                                     'logoutRedirect' => array('controller' => 'admins', 'action' => 'login'),
-                                    'loginAction' => array('controller'=>'admins', 'action'=>'login')
+                                    'loginAction' => array('controller'=>'admins', 'action'=>'login'),
+                                    'authorize' => array('Controller')
                                 ));
 
+
+    public function isAuthorized($user = null) { 
+        if($this->Auth->user('role') == 'author') {
+            $this->Session->setFlash(__($this->Auth->user('role').' not Authorized'));
+            $this->redirect(array('controller' => 'admins', 'action' => 'login'));
+            return false;
+        } 
+        return true;
+    }
 
 
     public function beforeFilter() {
@@ -54,6 +64,7 @@ class AppController extends Controller {
             'Form',
             'Basic'
         );
+
     }
 
 }
