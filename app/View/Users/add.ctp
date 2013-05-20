@@ -9,7 +9,10 @@
 		echo $this->Form->input('first_name');
 		echo $this->Form->input('middle_name');
 		echo $this->Form->input('last_name');
-		echo $this->Form->input('gender');
+		echo $this->Form->input('gender' , array(
+			'options' => array('M' => 'M', 'F' => 'F'),
+			'empty' => 'Seleccione'
+		));
 		echo $this->Form->input('birthday');
 		echo $this->Form->input('email');
 		echo $this->Form->input('phone');

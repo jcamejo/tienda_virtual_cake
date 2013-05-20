@@ -8,5 +8,10 @@ class Score extends AppModel {
         )
     );
 
+    public $validate = array(
+        'user_id' => 'notEmpty',
+        'score' => 'notEmpty'
+    );
+
 }
 

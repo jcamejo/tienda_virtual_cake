@@ -8,12 +8,12 @@
 		</dd>
 		<dt><?php echo __('User'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($userChallenge['User']['id'], array('controller' => 'users', 'action' => 'view', $userChallenge['User']['id'])); ?>
+			<?php echo $this->Html->link($userChallenge['User']['facebookid'], array('controller' => 'users', 'action' => 'view', $userChallenge['User']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Challenge'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($userChallenge['Challenge']['id'], array('controller' => 'challenges', 'action' => 'view', $userChallenge['Challenge']['id'])); ?>
+			<?php echo $this->Html->link($userChallenge['Challenge']['friendly_name'], array('controller' => 'challenges', 'action' => 'view', $userChallenge['Challenge']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Date Completed'); ?></dt>

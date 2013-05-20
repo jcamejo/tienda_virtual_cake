@@ -4,10 +4,7 @@ class User extends AppModel {
         'UserArticle', 'UserChallenge'
     );
 
-
-    
-
-    public $displayField = 'first_name';
+    public $displayField = 'facebookid';
 
     public $validate = array(
         'join_date' => array(

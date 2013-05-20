@@ -6,7 +6,6 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('user_id');
 		echo $this->Form->input('score');
-		echo $this->Form->input('date_updated');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

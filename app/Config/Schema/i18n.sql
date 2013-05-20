@@ -1,4 +1,4 @@
-# $Id$
+# $Id: i18n.sql 356 2013-05-20 21:33:06Z jcamejo $
 #
 # Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
 #

@@ -12,10 +12,10 @@
 	<tr>
 		<td><?php echo h($userChallenge['UserChallenge']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($userChallenge['User']['id'], array('controller' => 'users', 'action' => 'view', $userChallenge['User']['id'])); ?>
+			<?php echo $this->Html->link($userChallenge['User']['facebookid'], array('controller' => 'users', 'action' => 'view', $userChallenge['User']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->Html->link($userChallenge['Challenge']['id'], array('controller' => 'challenges', 'action' => 'view', $userChallenge['Challenge']['id'])); ?>
+			<?php echo $this->Html->link($userChallenge['Challenge']['friendly_name'], array('controller' => 'challenges', 'action' => 'view', $userChallenge['Challenge']['id'])); ?>
 		</td>
 		<td><?php echo h($userChallenge['UserChallenge']['date_completed']); ?>&nbsp;</td>
 		<td class="actions">

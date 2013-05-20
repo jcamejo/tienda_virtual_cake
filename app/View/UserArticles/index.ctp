@@ -2,6 +2,7 @@
 	<h2><?php echo __('User Articles'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
+			
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('article_id'); ?></th>
@@ -15,7 +16,7 @@
 	<tr>
 		<td><?php echo h($userArticle['UserArticle']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($userArticle['User']['first_name'], array('controller' => 'users', 'action' => 'view', $userArticle['User']['id'])); ?>
+			<?php echo $this->Html->link($userArticle['User']['facebookid'], array('controller' => 'users', 'action' => 'view', $userArticle['User']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($userArticle['Article']['name'], array('controller' => 'articles', 'action' => 'view', $userArticle['Article']['id'])); ?>

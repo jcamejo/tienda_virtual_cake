@@ -4,8 +4,7 @@
 		<legend><?php echo __('Add Score'); ?></legend>
 	<?php
 		echo $this->Form->input('user_id');
-		echo $this->Form->input('score');
-		echo $this->Form->input('date_updated');
+		echo $this->Form->input('score', array('default' => 0));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

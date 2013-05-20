@@ -5,9 +5,7 @@ class Tag extends AppModel {
     );
 
     public $validate = array(
-        'name' => array(
-            'allowEmpty' => false
-        )
+        'name' => 'notEmpty'
     );
 }
 
