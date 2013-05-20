@@ -7,5 +7,9 @@ class Platform extends AppModel {
         )
     );
 
+    public $validate = array(
+        'name' => 'notEmpty'
+    );
+
 }
 

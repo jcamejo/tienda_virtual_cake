@@ -15,7 +15,7 @@
 	<tr>
 		<td><?php echo h($userArticle['UserArticle']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($userArticle['User']['id'], array('controller' => 'users', 'action' => 'view', $userArticle['User']['id'])); ?>
+			<?php echo $this->Html->link($userArticle['User']['first_name'], array('controller' => 'users', 'action' => 'view', $userArticle['User']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($userArticle['Article']['name'], array('controller' => 'articles', 'action' => 'view', $userArticle['Article']['id'])); ?>
@@ -49,6 +49,10 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Asignar Articulo a usuario'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New User Article'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Articles'), array('controller' => 'articles', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Article'), array('controller' => 'articles', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

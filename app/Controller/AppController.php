@@ -53,7 +53,7 @@ class AppController extends Controller {
             $this->Session->setFlash(__($this->Auth->user('role').' not Authorized'));
             $this->redirect(array('controller' => 'admins', 'action' => 'login'));
             return false;
-        } 
+        }
         return true;
     }
 

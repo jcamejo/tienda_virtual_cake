@@ -38,6 +38,7 @@ class ChallengeParamsController extends AppController {
  * @return void
  */
 	public function add() {
+		
 		if ($this->request->is('post')) {
 			$this->ChallengeParam->create();
 			if ($this->ChallengeParam->save($this->request->data)) {

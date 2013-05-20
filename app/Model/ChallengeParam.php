@@ -21,4 +21,10 @@ class ChallengeParam extends AppModel {
 			'foreignKey' => 'challenge_id'
 		)
 	);
+
+    public $validate = array(
+        'challenge_id' => 'notEmpty',
+        'param_name' => 'notEmpty',
+        'param_value' => 'notEmpty'
+    );
 }

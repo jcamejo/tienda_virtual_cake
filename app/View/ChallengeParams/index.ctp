@@ -12,7 +12,7 @@
 	<tr>
 		<td><?php echo h($challengeParam['ChallengeParam']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($challengeParam['Challenge']['id'], array('controller' => 'challenges', 'action' => 'view', $challengeParam['Challenge']['id'])); ?>
+			<?php echo $this->Html->link($challengeParam['Challenge']['friendly_name'], array('controller' => 'challenges', 'action' => 'view', $challengeParam['Challenge']['id'])); ?>
 		</td>
 		<td><?php echo h($challengeParam['ChallengeParam']['param_name']); ?>&nbsp;</td>
 		<td><?php echo h($challengeParam['ChallengeParam']['param_value']); ?>&nbsp;</td>

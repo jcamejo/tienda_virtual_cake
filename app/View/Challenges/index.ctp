@@ -2,6 +2,7 @@
 	<h2><?php echo __('Challenges'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
+			
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('date_created'); ?></th>
 			<th><?php echo $this->Paginator->sort('platform_id'); ?></th>

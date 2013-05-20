@@ -1,12 +1,11 @@
-
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('join_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('facebookId'); ?></th>
-			<th><?php echo $this->Paginator->sort('twitterId'); ?></th>
+			<th><?php echo $this->Paginator->sort('facebookid'); ?></th>
+			<th><?php echo $this->Paginator->sort('twitterid'); ?></th>
 			<th><?php echo $this->Paginator->sort('first_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('middle_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
@@ -20,8 +19,8 @@
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['join_date']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['facebookId']); ?>&nbsp;</td>
-		<td><?php echo h($user['User']['twitterId']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['facebookid']); ?>&nbsp;</td>
+		<td><?php echo h($user['User']['twitterid']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['first_name']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['middle_name']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['last_name']); ?>&nbsp;</td>
@@ -55,7 +54,9 @@
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar Articulos por Usuario'), array('controller' => 'user_articles', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Listar Retos por Usuario'), array('controller' => 'user_challenges', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('List User Articles'), array('controller' => 'user_articles', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User Article'), array('controller' => 'user_articles', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List User Challenges'), array('controller' => 'user_challenges', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New User Challenge'), array('controller' => 'user_challenges', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

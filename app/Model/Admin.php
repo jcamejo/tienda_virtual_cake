@@ -12,6 +12,10 @@ class Admin extends AppModel {
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'A password is required'
+            ),
+            'between' => array(
+                'rule'    => array('between', 3, 30),
+                'message' => 'Must be more than 8 characters long.'
             )
         ),
         'role' => array(

@@ -3,12 +3,14 @@
 	<fieldset>
 		<legend><?php echo __('Add Challenge'); ?></legend>
 	<?php
-		echo $this->Form->input('date_created');
 		echo $this->Form->input('platform_id');
 		echo $this->Form->input('action');
 		echo $this->Form->input('friendly_name');
-		echo $this->Form->input('reward');
-		echo $this->Form->input('status');
+		echo $this->Form->input('reward', array('default' => '0'));
+		echo $this->Form->input('status' , array(
+			'options' => array('0' => 'ACTIVE', '1' => 'INACTIVE'),
+			'default' => 'ACTIVE'
+		));
 		echo $this->Form->input('date_expired');
 	?>
 	</fieldset>

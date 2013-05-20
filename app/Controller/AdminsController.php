@@ -69,7 +69,7 @@ class AdminsController extends AppController {
     public function login() {
         $userData = $this->Auth->user();
         if($userData != null) {
-            //$this->redirect(array('controller' => 'pages', 'action' => 'home'));
+            $this->redirect(array('controller' => 'pages', 'action' => 'home'));
         }
 
         if ($this->request->is('post')) {

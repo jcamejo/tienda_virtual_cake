@@ -5,8 +5,8 @@
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('join_date');
-		echo $this->Form->input('facebookId');
-		echo $this->Form->input('twitterId');
+		echo $this->Form->input('facebookid');
+		echo $this->Form->input('twitterid');
 		echo $this->Form->input('first_name');
 		echo $this->Form->input('middle_name');
 		echo $this->Form->input('last_name');

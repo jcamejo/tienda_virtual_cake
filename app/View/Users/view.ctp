@@ -11,14 +11,14 @@
 			<?php echo h($user['User']['join_date']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('FacebookId'); ?></dt>
+		<dt><?php echo __('Facebookid'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['facebookId']); ?>
+			<?php echo h($user['User']['facebookid']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('TwitterId'); ?></dt>
+		<dt><?php echo __('Twitterid'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['twitterId']); ?>
+			<?php echo h($user['User']['twitterid']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('First Name'); ?></dt>

@@ -4,14 +4,12 @@
 		<legend><?php echo __('Add Article'); ?></legend>
 	<?php
 		echo $this->Form->input('name');
-		echo $this->Form->input('date_created');
 		echo $this->Form->input('code');
 		echo $this->Form->input('image_url');
 		echo $this->Form->input('thumb_url');
 		echo $this->Form->input('description');
-		echo $this->Form->input('cost');
-		echo $this->Form->input('stock');
-		echo $this->Form->input('date_updated');
+		echo $this->Form->input('cost', array('default' => '0'));
+		echo $this->Form->input('stock', array('default' => '0'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

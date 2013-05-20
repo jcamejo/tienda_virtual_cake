@@ -7,8 +7,6 @@
 		echo $this->Form->input('headline');
 		echo $this->Form->input('summary');
 		echo $this->Form->input('content');
-		echo $this->Form->input('date_created');
-		echo $this->Form->input('date_updated');
 		echo $this->Form->input('photo_url');
 		echo $this->Form->input('more_info_url');
 		echo $this->Form->input('video_url');
