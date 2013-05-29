@@ -4,21 +4,32 @@ class User extends AppModel {
         'UserArticle', 'UserChallenge'
     );
 
-    public $displayField = 'facebookid';
+    public $hasOne = 'Score';
+
+    public $displayField = 'facebookId';
 
     public $validate = array(
-        'join_date' => array(
+        'joinDate' => array(
             'rule' => 'notEmpty'
         ),
-        'facebookid' => array(
+        'facebookId' => array(
             'notEmpty' => array(
                 'rule' => 'notEmpty' 
+            ),
+            'unique' => array(
+                'rule' => 'isUnique',
+                'message' => 'This facebook ID has already been saved.'
             )
         ),
-        'first_name' => array(
+        'twitterId' => array(
+            'rule' => 'isUnique',
+            'message' => 'This twitter ID has already been saved.',
+            'allowEmpty' => true
+        ),
+        'firstName' => array(
             'rule' => 'notEmpty'
         ),
-        'last_name' => array(
+        'lastName' => array(
             'rule' => 'notEmpty'
         ),
         'email' => array(
@@ -26,7 +37,7 @@ class User extends AppModel {
             'allowEmpty' => true
         ),
         'phone' => array(
-            'rule'    => 'numeric',
+            'rule' => 'numeric',
             'message' => 'Please supply a correct phone number',
             'allowEmpty' => true
         )

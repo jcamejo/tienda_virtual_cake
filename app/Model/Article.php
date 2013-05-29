@@ -9,12 +9,22 @@ class Article extends AppModel {
             'required' => array(
                 'rule' => array('notEmpty'),
                 'message' => 'A username is required'
+            ),
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Nombre ya registrado'
             )
         ),
         'code' => array(
-            'rule' => 'notEmpty'
+            'notEmpty' => array(
+                'rule' => 'notEmpty'
+            ),
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Codigo ya registrado'
+            )
         ),
-        'image_url' => array(
+        'imageURL' => array(
             'extension' => array(
                 'rule'=> array('extension', array('gif','jpeg','png','jpg')),
                 'message' => 'Please supply a valid image',
@@ -22,8 +32,10 @@ class Article extends AppModel {
         ),
         'cost' => array(
             'rule' => 'notEmpty'
+        ),
+        'stock' => array(
+            'rule' => 'notEmpty'
         )
-
     );
 
 }

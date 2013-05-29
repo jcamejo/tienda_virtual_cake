@@ -1,29 +1,30 @@
 <div class="challenges form">
 <?php echo $this->Form->create('Challenge'); ?>
-	<fieldset>
-		<legend><?php echo __('Add Challenge'); ?></legend>
-	<?php
-		echo $this->Form->input('platform_id');
-		echo $this->Form->input('action');
-		echo $this->Form->input('friendly_name');
-		echo $this->Form->input('reward', array('default' => '0'));
-		echo $this->Form->input('status' , array(
-			'options' => array('0' => 'ACTIVE', '1' => 'INACTIVE'),
-			'default' => 'ACTIVE'
-		));
-		echo $this->Form->input('date_expired');
-	?>
-	</fieldset>
+    <fieldset>
+        <legend><?php echo __('Add Challenge'); ?></legend>
+    <?php
+        echo $this->Form->input('platform_id');
+        echo $this->Form->input('action');
+        echo $this->Form->input('friendlyName');
+        echo $this->Form->input('reward');
+        echo $this->Form->input('status' , array(
+            'options' => array('ACTIVE' => 'ACTIVE', 'INACTIVE' => 'INACTIVE'),
+        ));
+        echo $this->Form->input('dateExpired');
+    ?>
+    </fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+    <h3><?php echo __('Actions'); ?></h3>
+    <ul>
 
-		<li><?php echo $this->Html->link(__('List Challenges'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Platforms'), array('controller' => 'platforms', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Platform'), array('controller' => 'platforms', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List User Challenges'), array('controller' => 'user_challenges', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User Challenge'), array('controller' => 'user_challenges', 'action' => 'add')); ?> </li>
-	</ul>
+        <li><?php echo $this->Html->link(__('List Challenges'), array('action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('List Platforms'), array('controller' => 'platforms', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Platform'), array('controller' => 'platforms', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('List User Challenges'), array('controller' => 'user_challenges', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New User Challenge'), array('controller' => 'user_challenges', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('List Challenge Params'), array('controller' => 'challenge_params', 'action' => 'index')); ?> </li>
+        <li><?php echo $this->Html->link(__('New Challenge Param'), array('controller' => 'challenge_params', 'action' => 'add')); ?> </li>
+    </ul>
 </div>

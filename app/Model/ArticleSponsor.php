@@ -5,8 +5,17 @@ class ArticleSponsor extends AppModel {
     );
 
     public $validate = array(
-        'article_id' => 'notEmpty',
-        'sponsor_id' => 'notEmpty'
+        'article_id' => array(
+            'notEmpty' => array(
+                'rule' => 'notEmpty'
+            ),
+            'unique' => array(
+                'rule' => array('checkUnique', array('article_id', 'sponsor_id')),
+                'message' => 'Ya existe un par article/sponsor registrado con estos datos'
+            )
+
+        ),
+        'sponsor_id' => 'notEmpty',
     );
 }
 

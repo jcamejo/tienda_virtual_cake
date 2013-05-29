@@ -5,7 +5,15 @@ class Tag extends AppModel {
     );
 
     public $validate = array(
-        'name' => 'notEmpty'
+        'name' => array(
+            'notEmpty' => array(
+                'rule' => 'notEmpty'
+            ),
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Nombre ya registrado'
+            )
+        )
     );
 }
 

@@ -17,19 +17,19 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 if (!Configure::read('debug')):
-	throw new NotFoundException();
+    throw new NotFoundException();
 endif;
 App::uses('Debugger', 'Utility');
 ?>
 <div class="actions">
-	<h3><?php echo __('Módulos'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Articulos'), array('controller' => 'articles', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Categorias'), array('controller' => 'categories', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Etiquetas'), array('controller' => 'tags', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Retos'), array('controller' => 'challenges', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Noticias'), array('controller' => 'news', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Patrocinantes'), array('controller' => 'sponsors', 'action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
-	</ul>
+    <h3><?php echo __('Módulos'); ?></h3>
+    <ul>
+        <li><?php echo $this->Html->link(__('Articulos'), array('controller' => 'articles', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Categorias'), array('controller' => 'categories', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Etiquetas'), array('controller' => 'tags', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Retos'), array('controller' => 'challenges', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Noticias'), array('controller' => 'news', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Patrocinantes'), array('controller' => 'sponsors', 'action' => 'index')); ?></li>
+        <li><?php echo $this->Html->link(__('Usuarios'), array('controller' => 'users', 'action' => 'index')); ?></li>
+    </ul>
 </div>

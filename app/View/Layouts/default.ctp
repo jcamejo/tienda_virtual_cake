@@ -31,6 +31,7 @@ $logout = $userData == null ? '': $this->Html->link('Logout', array('controller'
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
+		echo $this->Html->script('jquery-2.0.0'); // Include jQuery library
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
@@ -38,6 +39,7 @@ $logout = $userData == null ? '': $this->Html->link('Logout', array('controller'
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+
 	?>
 </head>
 <body>

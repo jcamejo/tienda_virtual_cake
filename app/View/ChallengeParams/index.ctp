@@ -1,21 +1,20 @@
 <div class="challengeParams index">
-	<h2><?php echo __('Challenge Params'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('challenge_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('param_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('param_value'); ?></th>
+			<th><?php echo $this->Paginator->sort('paramName'); ?></th>
+			<th><?php echo $this->Paginator->sort('paramValue'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($challengeParams as $challengeParam): ?>
 	<tr>
 		<td><?php echo h($challengeParam['ChallengeParam']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($challengeParam['Challenge']['friendly_name'], array('controller' => 'challenges', 'action' => 'view', $challengeParam['Challenge']['id'])); ?>
+			<?php echo $this->Html->link($challengeParam['Challenge']['id'], array('controller' => 'challenges', 'action' => 'view', $challengeParam['Challenge']['id'])); ?>
 		</td>
-		<td><?php echo h($challengeParam['ChallengeParam']['param_name']); ?>&nbsp;</td>
-		<td><?php echo h($challengeParam['ChallengeParam']['param_value']); ?>&nbsp;</td>
+		<td><?php echo h($challengeParam['ChallengeParam']['paramName']); ?>&nbsp;</td>
+		<td><?php echo h($challengeParam['ChallengeParam']['paramValue']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $challengeParam['ChallengeParam']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $challengeParam['ChallengeParam']['id'])); ?>
@@ -41,7 +40,8 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Nuevo Parametro de Reto'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Listar Retos'), array('controller' => 'challenges', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Challenge Param'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('List Challenges'), array('controller' => 'challenges', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Challenge'), array('controller' => 'challenges', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

@@ -6,7 +6,13 @@ class Sponsor extends AppModel {
 
     public $validate = array(
         'name' => array(
-            'allowEmpty' => false
+            'notEmpty' => array(
+                'rule' => 'notEmpty'
+            ),
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Nombre ya registrado'
+            )
         )
     );
     

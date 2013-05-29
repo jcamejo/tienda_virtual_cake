@@ -13,7 +13,20 @@ class ChallengeParamsControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.challenge_param'
+		'app.challenge_param',
+		'app.challenge',
+		'app.platform',
+		'app.user_challenge',
+		'app.user',
+		'app.score',
+		'app.user_article',
+		'app.article',
+		'app.article_tag',
+		'app.tag',
+		'app.article_category',
+		'app.category',
+		'app.article_sponsor',
+		'app.sponsor'
 	);
 
 /**

@@ -3,12 +3,12 @@ class Challenge extends AppModel {
     public $hasMany = array(
         'UserChallenge', 'ChallengeParam'
     );
-    public $displayField = 'friendly_name';
+    public $displayField = 'friendlyName';
 
     var $belongsTo = array(
         'Platform' => array(
-            'className'    => 'Platform',
-            'foreignKey'    => 'platform_id'
+            'className' => 'Platform',
+            'foreignKey' => 'platform_id'
          )
     );
 

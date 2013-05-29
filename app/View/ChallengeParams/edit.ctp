@@ -3,10 +3,9 @@
 	<fieldset>
 		<legend><?php echo __('Edit Challenge Param'); ?></legend>
 	<?php
-		echo $this->Form->input('id');
 		echo $this->Form->input('challenge_id');
-		echo $this->Form->input('param_name');
-		echo $this->Form->input('param_value');
+		echo $this->Form->input('paramName');
+		echo $this->Form->input('paramValue');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

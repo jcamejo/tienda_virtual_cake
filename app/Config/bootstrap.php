@@ -27,6 +27,11 @@
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
+//Configure the timezone
+
+date_default_timezone_set('America/Caracas');
+
+
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
@@ -71,7 +76,7 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-CakePlugin::load('DebugKit');
+CakePlugin::loadAll();
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:

@@ -23,8 +23,16 @@ class ChallengeParam extends AppModel {
 	);
 
     public $validate = array(
-        'challenge_id' => 'notEmpty',
-        'param_name' => 'notEmpty',
-        'param_value' => 'notEmpty'
+        'challenge_id' => array(
+            'unique' => array(
+                'rule' => array('checkUnique', array('challenge_id', 'paramName')),
+                'message' => 'Ya existe un parametro con el mismo nombre en este reto',
+            ),
+            'notEmpty' => array(
+                'rule' => 'notEmpty'
+            )
+        ),
+        'paramName' => 'notEmpty',
+        'paramValue' => 'notEmpty',
     );
 }
